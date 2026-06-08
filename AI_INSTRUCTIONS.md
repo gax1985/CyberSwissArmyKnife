@@ -24,4 +24,9 @@ Whenever any commands are executed, modified, or introduced:
     1. The exact command run.
     2. The purpose of the command.
     3. The expected output and any side effects.
-    4. Any errors encountered and how they were resolved.
+    4. Any errors encountered and how they were resolved.
+
+## 5. MCP Server Check Priority (Source of Truth)
+*   **Check MCP Configurations First**: The AI assistant MUST check the workspace's local MCP settings file (`.gemini/settings.json`) and the global MCP configurations at the beginning of any work session.
+*   **Source of Truth**: These configurations define the active tools and system integrations configured for the environment (such as git, filesystem, local kubernetes, nixos, and Langflow RAG) and serve as the source of truth for the capabilities available to the agent.
+
