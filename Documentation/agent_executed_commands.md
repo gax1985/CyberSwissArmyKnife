@@ -112,3 +112,28 @@ git add .; git commit -m "docs: add justfile, update AI instructions, and record
 * **Output / Behavior**: Successfully created a second commit with these configuration and documentation files.
 * **Errors / Resolution**: None.
 
+---
+
+## 10. Listing Local SSH Keys for Diagnostic Purposes
+
+### Command
+```powershell
+Get-ChildItem ~\.ssh
+```
+* **Purpose**: Inspect the `.ssh` directory to diagnose why git SSH push failed with a publickey access error.
+* **Output / Behavior**: Verified that no private/public keys (like `id_ed25519` or `id_rsa`) existed on the host, indicating a key needed to be created.
+* **Errors / Resolution**: Instructed the user to run `gh auth login` again and opt to generate a new SSH key.
+
+---
+
+## 11. Testing Connection and Pushing to GitHub
+
+### Command
+```powershell
+ssh -T git@github.com; git push -u origin master
+```
+* **Purpose**: Authenticate via SSH with GitHub using the newly created key pair, and push the local master branch to the remote origin.
+* **Output / Behavior**: Successfully verified SSH authentication for user `gax1985` and successfully pushed all commits to the remote public repository.
+* **Errors / Resolution**: None.
+
+

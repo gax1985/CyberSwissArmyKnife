@@ -37,3 +37,5 @@ agent-setup-history:
     @echo " 6. $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User'); gh auth status"
     @echo " 7. git reset; git add .; git commit -m 'initial commit: project structure and core langflow client'"
     @echo " 8. git add .; git commit -m 'docs: add justfile, update AI instructions, and record agent execution history'"
+    @echo " 9. Get-ChildItem ~\\.ssh"
+    @echo " 10. ssh -T git@github.com; git push -u origin master"
