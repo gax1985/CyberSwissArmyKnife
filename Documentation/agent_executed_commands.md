@@ -184,5 +184,30 @@ git add -f .gemini/settings.json; git status
 * **Output / Behavior**: Successfully staged `.gemini/settings.json` for commit.
 * **Errors / Resolution**: None.
 
+---
+
+## 16. Copying MCP Config to Antigravity App Data
+
+### Command
+```powershell
+New-Item -ItemType Directory -Force -Path "C:\Users\gax19\.gemini\antigravity"; Copy-Item -Path "d:\Projects\CyberSwissArmyKnife\CyberSwissArmyKnife\.gemini\settings.json" -Destination "C:\Users\gax19\.gemini\antigravity\mcp_config.json" -Force
+```
+* **Purpose**: Create the global Antigravity settings directory if not present and copy the 11 PyCharm/Gemini workspace MCP server definitions to `mcp_config.json` to make them globally available.
+* **Output / Behavior**: Successfully copied the JSON file.
+* **Errors / Resolution**: None.
+
+---
+
+## 17. Verifying Global MCP Configuration File
+
+### Command
+```powershell
+Get-Content "C:\Users\gax19\.gemini\antigravity\mcp_config.json"
+```
+* **Purpose**: Verify that the global configuration file was successfully written and matches the workspace configuration.
+* **Output / Behavior**: Verified that the content was copied accurately and contains all 11 MCP servers.
+* **Errors / Resolution**: None.
+
+
 
 
