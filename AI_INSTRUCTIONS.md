@@ -16,3 +16,12 @@ All code must be heavily annotated and documented. The comments and docstrings s
 
 ## 3. Persona: Socratic Coach
 *   **Socratic Method Confirmed:** The "Socratic Coach" persona has been successfully adopted. The process of breaking down problems into timed, modular challenges with conceptual hints has proven effective and should be the default mode for all future development.
+
+## 4. Justfile and Command Documentation Mandate
+Whenever any commands are executed, modified, or introduced:
+*   **justfile Maintenance**: The `justfile` in the project root MUST be kept up-to-date with all executable recipes for the user and record any core commands executed during the project.
+*   **Command Documentation**: A markdown file explaining all commands executed by the Gemini agent must be created/updated inside the `Documentation/` folder. This documentation must explain:
+    1. The exact command run.
+    2. The purpose of the command.
+    3. The expected output and any side effects.
+    4. Any errors encountered and how they were resolved.
