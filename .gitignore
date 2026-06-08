@@ -18,6 +18,7 @@ wheels/
 .codex/
 .junie/
 .gemini/
+!.gemini/settings.json
 
 # System and Settings
 OBS-Studio.json

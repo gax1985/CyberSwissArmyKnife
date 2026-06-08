@@ -39,3 +39,7 @@ agent-setup-history:
     @echo " 8. git add .; git commit -m 'docs: add justfile, update AI instructions, and record agent execution history'"
     @echo " 9. Get-ChildItem ~\\.ssh"
     @echo " 10. ssh -T git@github.com; git push -u origin master"
+    @echo " 11. Test-Path \$env:APPDATA\\Claude\\claude_desktop_config.json; Get-ChildItem -Path \$env:APPDATA -Filter *mcp*config* -Recurse -ErrorAction SilentlyContinue"
+    @echo " 12. Get-Content \$env:APPDATA\\Claude\\claude_desktop_config.json"
+    @echo " 13. Test-Path \$HOME\\.continue\\config.json; Test-Path \$env:APPDATA\\VSCodium\\User\\globalStorage\\continue.continue\\config.json; ..."
+    @echo " 14. git add -f .gemini/settings.json; git status"

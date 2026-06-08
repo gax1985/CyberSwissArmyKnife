@@ -136,4 +136,53 @@ ssh -T git@github.com; git push -u origin master
 * **Output / Behavior**: Successfully verified SSH authentication for user `gax1985` and successfully pushed all commits to the remote public repository.
 * **Errors / Resolution**: None.
 
+---
+
+## 12. Searching for Global MCP Server Configurations
+
+### Command
+```powershell
+Test-Path "$env:APPDATA\Claude\claude_desktop_config.json"; Get-ChildItem -Path "$env:APPDATA" -Filter "*mcp*config*" -Recurse -ErrorAction SilentlyContinue | Select-Object FullName
+```
+* **Purpose**: Check if Claude Desktop is installed and configured on the host, and search the Roaming AppData directory for any other configurations containing the word "mcp" and "config".
+* **Output / Behavior**: Confirmed Claude Desktop's configuration file exists and returned other internal OpenClaw configurations.
+* **Errors / Resolution**: None.
+
+---
+
+## 13. Inspecting Claude Desktop MCP Config
+
+### Command
+```powershell
+Get-Content "$env:APPDATA\Claude\claude_desktop_config.json"
+```
+* **Purpose**: Read the Claude Desktop configuration to verify the MCP servers defined there and check for sensitive information.
+* **Output / Behavior**: Returned two servers (`jetbrains` and `lf-starter_project`), both referencing local tools or endpoints with no secrets.
+* **Errors / Resolution**: None.
+
+---
+
+## 14. Checking Global Continue and Editor-Specific Config Paths
+
+### Command
+```powershell
+Test-Path "$HOME\.continue\config.json"; Test-Path "$env:APPDATA\VSCodium\User\globalStorage\continue.continue\config.json"; Test-Path "$env:APPDATA\Code\User\globalStorage\continue.continue\config.json"
+```
+* **Purpose**: Verify if global or editor-specific (VSCodium/VSCode) configurations for the Continue extension exist on the host.
+* **Output / Behavior**: Returned `False` for all paths, indicating the user's MCP configurations are concentrated in PyCharm and Gemini.
+* **Errors / Resolution**: None.
+
+---
+
+## 15. Force-Tracking Gemini MCP Configuration File
+
+### Command
+```powershell
+git add -f .gemini/settings.json; git status
+```
+* **Purpose**: Force-add the `.gemini/settings.json` configuration file to the Git index. Since `.gemini/` is ignored by default in `.gitignore`, force-adding ensures the file is tracked while keeping the rest of the `.gemini/` folder ignored.
+* **Output / Behavior**: Successfully staged `.gemini/settings.json` for commit.
+* **Errors / Resolution**: None.
+
+
 

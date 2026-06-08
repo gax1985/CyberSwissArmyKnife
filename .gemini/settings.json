@@ -1,0 +1,82 @@
+{
+  "mcpServers": {
+    "langflow-swiss-army-knife": {
+      "command": "C:\\Users\\gax19\\AppData\\Local\\UniGetUI\\Chocolatey\\bin\\uvx.exe",
+      "args": [
+        "--from",
+        "lfx",
+        "lfx-mcp"
+      ],
+      "env": {
+        "LANGFLOW_SERVER_URL": "http://localhost:7860"
+      }
+    },
+    "nixos": {
+      "command": "C:\\Users\\gax19\\AppData\\Local\\UniGetUI\\Chocolatey\\bin\\uvx.exe",
+      "args": [
+        "mcp-nixos"
+      ]
+    },
+    "kubernetes": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-kubernetes"
+      ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "huggingface": {
+      "type": "sse",
+      "url": "https://huggingface.co/mcp",
+      "headers": {
+        "Authorization": "Bearer ${HF_TOKEN}"
+      }
+    },
+    "sequentialthinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "git": {
+      "command": "C:\\Users\\gax19\\AppData\\Local\\UniGetUI\\Chocolatey\\bin\\uvx.exe",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "."
+      ]
+    },
+    "time": {
+      "command": "C:\\Users\\gax19\\AppData\\Local\\UniGetUI\\Chocolatey\\bin\\uvx.exe",
+      "args": [
+        "mcp-server-time"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "microsoft-learn": {
+      "type": "sse",
+      "url": "https://learn.microsoft.com/api/mcp"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "D:\\Projects\\CyberSwissArmyKnife\\CyberSwissArmyKnife"
+      ]
+    }
+  }
+}
