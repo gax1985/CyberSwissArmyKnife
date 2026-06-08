@@ -99,3 +99,16 @@ git reset; git add .; git commit -m "initial commit: project structure and core 
 * **Purpose**: Reset any stale or broken staged files, stage all valid project files under the new `.gitignore` rules, and create the initial local commit.
 * **Output / Behavior**: Successfully committed 25 files (16,717 insertions) as the root commit on the `master` branch.
 * **Errors / Resolution**: None.
+
+---
+
+## 9. Staging and Committing Orchestration & Documentation Files
+
+### Command
+```powershell
+git add .; git commit -m "docs: add justfile, update AI instructions, and record agent execution history"
+```
+* **Purpose**: Stage the new `justfile`, the updated `.gitignore` rules, the updated `AI_INSTRUCTIONS.md`, and the newly created `Documentation/` directory, and commit them locally.
+* **Output / Behavior**: Successfully created a second commit with these configuration and documentation files.
+* **Errors / Resolution**: None.
+
