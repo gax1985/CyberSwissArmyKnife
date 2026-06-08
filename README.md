@@ -1,4 +1,4 @@
-# 🛡️ Cyber Swiss Army Knife
+# 🛡️ Cyber Swiss Army Knife - AI Agent Skill Generator 
 
 A local-first, highly specialized personal AI infrastructure and pentesting environment that bridges a Windows host with a WSL (Ubuntu) backend. This system is designed around a "markdown-first" philosophy for processing penetration testing logs, categorizing MITRE ATT&CK tactics, and orchestrating workflows using local LLMs.
 
