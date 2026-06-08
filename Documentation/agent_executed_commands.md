@@ -208,6 +208,19 @@ Get-Content "C:\Users\gax19\.gemini\antigravity\mcp_config.json"
 * **Output / Behavior**: Verified that the content was copied accurately and contains all 11 MCP servers.
 * **Errors / Resolution**: None.
 
+---
+
+## 18. Committing MCP Configuration Check Priority Mandate
+
+### Command
+```powershell
+git add .; git commit -m "docs: add mandate to prioritize checking MCP configurations in AI_INSTRUCTIONS.md"; git push
+```
+* **Purpose**: Stage the changes made to `AI_INSTRUCTIONS.md` containing the MCP server priority rules, commit them, and push them to the public GitHub repository.
+* **Output / Behavior**: Successfully committed the changes and pushed them to remote origin.
+* **Errors / Resolution**: None.
+
+
 
 
 

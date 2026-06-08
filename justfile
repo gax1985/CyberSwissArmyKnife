@@ -45,3 +45,4 @@ agent-setup-history:
     @echo " 14. git add -f .gemini/settings.json; git status"
     @echo " 15. New-Item -ItemType Directory -Force -Path C:\\Users\\gax19\\.gemini\\antigravity; Copy-Item ..."
     @echo " 16. Get-Content C:\\Users\\gax19\\.gemini\\antigravity\\mcp_config.json"
+    @echo " 17. git add .; git commit -m 'docs: add mandate to prioritize checking MCP configurations...'; git push"
